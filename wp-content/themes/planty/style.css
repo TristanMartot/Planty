@@ -1,7 +1,189 @@
 /*
  Theme Name:   Planty
- Description:  Thème Planty basé sur le thème de twentytwentyfour
+ Description:  Thème Planty basé sur le thème de twentytwenty
  Author:       Tristan
- Template:     twentytwentyfour
+ Template:     twentytwenty
  Version:      1.0.0
 */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+:root {
+    --main-color: #ece2da; 
+    --second-color: #3B8E46; 
+  }
+  
+* {
+    font-family: syne !important;
+    font-size: 16px;
+}
+
+a {
+    color:black;
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--second-color);
+}
+
+h2 {
+    font-size: 30px;
+    color: var(--second-color);
+}
+
+body {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 !important;
+    height: 60px;
+}
+
+.logo a {
+    padding: 30px;
+    width: 250px;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.header_section {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.nav_wrapper {
+    height: 100%;
+}
+/************ NAV ****************/
+
+nav {
+    height: 100%;
+}
+
+nav a {
+    color: black !important;
+}
+
+nav a:hover {
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none !important;
+    margin: auto;
+}
+
+nav ul {
+    text-align: left !important;
+    height: 100%;
+    align-items:center;
+    gap: 20px;
+}
+
+nav ul .item_Commander a {
+    width: 236px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none !important;
+    font-size: 16px;
+}
+nav ul .item_Commander {
+    width: 236px;
+    height: 100%;
+    background-color: #DC9F96;
+    display: flex;
+}
+
+nav ul .item_Commander:hover {
+    width: 236px;
+    height: 100%;
+    background-color:#C02E44;
+    display: flex;
+    font-size: inherit;
+}
+
+nav ul .item_Nous_rencontrer a {
+    width: 140px;
+    margin-left:0;
+    text-align: right;
+}
+
+nav ul .item_Nous_rencontrer a:hover {
+    width: 140px;
+    margin-left:0;
+    transform: translateX(15px);
+    transition-duration : 0s;
+    padding: 10px;
+}
+
+nav ul .item_Admin a {
+    width: 60px;
+    margin-left:0;
+    padding: 5px;
+    text-align: right;
+}
+
+nav ul .item_Admin a:hover {
+    width: 60px;
+    margin-left:0;
+    transform: translateX(5px);
+    transition-duration : 0s;
+    padding: 10px;
+
+}
+
+#site-content article header {
+    display:none;
+}
+
+.home_image_top img {
+    z-index: 1000;
+    object-fit: contain !important;
+}
+            
+.home_top_group {
+    border-bottom-right-radius: 50% 50px;
+    border-bottom-left-radius: 50% 50px;
+    padding-top: 100px !important;
+}
+
+.gallery_bloc_tastes {
+    max-width: 800px !important;
+}
+
+.gallery_bloc_tastes_img {
+    padding: 0;
+}
+
+.gallery_bloc_tastes_img img {
+    object-fit: contain !important;
+}
+
+.gallery_bloc_tastes_img div {
+    width: 100% !important;
+    font-size: 46px !important;
+}
+
+.gallery_bloc_tastes_img div p {
+    font-size: 46px !important;
+}

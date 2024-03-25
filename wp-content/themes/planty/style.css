@@ -256,3 +256,59 @@ nav ul .item_Admin a:hover {
     top: 100px;
     left: -225px;
 }
+
+.contact_team_group {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: -220px !important;
+}
+
+.contact_team_group h2 {
+    margin-bottom: 0px;
+}
+
+.contact_team_image img {
+    position: relative;
+    max-height: 200px;
+    object-fit: contain;
+    bottom: 178px;
+    left: 660px;
+}
+
+.contact_team_column {
+    max-width: 1000px !important;
+    margin-top: 0px !important;
+}
+
+.wpcf7 {
+    display: flex !important;
+    justify-content: center !important;
+    max-width: 500px !important;
+}
+
+.wpcf7 p input {
+    text-align: center !important;
+    border-radius: 7px;
+}
+
+.wpcf7 p label span textarea {
+    border-radius: 7px;
+}
+
+.wpcf7-submit {
+    border-radius: 5px !important;
+    background-color: #DC9F96 !important;
+    width: 200px;
+    font-size: 15px !important;
+    text-transform: capitalize !important;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wpcf7-spinner {
+    position: absolute;
+}

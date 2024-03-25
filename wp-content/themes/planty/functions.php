@@ -20,4 +20,5 @@ function planty_menu_class($classes, $item)
 }
 
 add_filter('nav_menu_css_class', 'planty_menu_class', 10, 2)
+
 ?>

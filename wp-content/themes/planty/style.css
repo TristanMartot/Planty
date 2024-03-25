@@ -32,6 +32,11 @@ h2 {
     color: var(--second-color);
 }
 
+h3 {
+    font-size: 30px;
+    color: var(--second-color);
+}
+
 body {
     max-width: 1440px;
     width: 100%;
@@ -167,12 +172,19 @@ nav ul .item_Admin a:hover {
     padding-top: 100px !important;
 }
 
+.home_text_group {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .gallery_bloc_tastes {
     max-width: 800px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .gallery_bloc_tastes_img {
-    padding: 0;
+    padding: 20px;
 }
 
 .gallery_bloc_tastes_img img {
@@ -186,4 +198,61 @@ nav ul .item_Admin a:hover {
 
 .gallery_bloc_tastes_img div p {
     font-size: 46px !important;
+}
+
+.home_tastes_group {
+    border-bottom-right-radius: 50% 25px;
+    border-bottom-left-radius: 50% 25px;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+
+.home_tastes_group a {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-decoration: none;
+}
+
+.home_tastes_group a:hover {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-decoration: none !important;
+    background-color: #C02E44 !important;
+}
+
+.home_tastes_group h2 {
+    margin-bottom: 0px !important;
+}
+
+.home_review {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-width: 1200px !important;
+}
+
+.home_review_group_column {
+    margin-top: 0px !important;
+}
+
+.home_review_group {
+    padding-top: 100px;
+    margin: 0 !important;
+}
+
+
+*/******************* Contact ****************/
+
+.contact_top_group {
+    margin:0;
+    margin-top:-100px !important;
+    padding-top: 0px !important;
+    border-bottom-right-radius: 50% 90px;
+    border-bottom-left-radius: 50% 90px;
+}
+
+.contact_image_top img {
+    max-width: 150px !important;
+    position: relative !important;
+    top: 100px;
+    left: -225px;
 }

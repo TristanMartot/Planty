@@ -19,6 +19,47 @@ function planty_menu_class($classes, $item)
     return str_replace(' ', '_', $classes);
 }
 
-add_filter('nav_menu_css_class', 'planty_menu_class', 10, 2)
+add_filter('nav_menu_css_class', 'planty_menu_class', 10, 2);
 
+
+
+
+//*************SHORTCODE***************//
+
+// Ajour de code dans la section de commande de la page COMMANDER 
+add_shortcode('order_quantity', 'order_quantity_func');
+
+function order_quantity_func($atts)
+{
+    //Je récupère les attributs mis sur le shortcode
+    $atts = shortcode_atts(array(
+        'column' => '',
+    ), $atts, 'order_quantity');
+
+    //Je commence à récupérer le flux d'information
+    ob_start();
+
+    if ($atts['column'] != "") {
+        ?>
+
+            <div class="container">
+                <div class="column1">
+                <div class="column1_left"><input value="0"></div>
+                <div class="column1_right">
+                    <div class="column1_right_top">+</div>
+                    <div class="column1_right_bottom">-</div>
+                </div>
+                </div>  
+                <div class="column2"><a href="#">OK</a></div>  
+            </div>
+
+        <?php
+    }
+
+    //J'arrête de récupérer le flux d'information et le stock dans la fonction $output
+    $output = ob_get_contents();
+    ob_end_clean();
+
+    return $output;
+}
 ?>

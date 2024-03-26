@@ -347,11 +347,136 @@ nav ul .item_Admin a:hover {
 }
 
 
-*/******************* ORDER *******************/*
+/******************* ORDER *******************/
+
+.order_title_group {
+    padding-top: 60px !important;
+}
 
 .order_product_group {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    max-width: 900px !important;
+    border-bottom: 1px solid white;
 }
+
+.order_product_group h2 {
+    border-top: 1px solid white;
+    padding-top: 30px !important;
+    margin-bottom: 0px;
+}
+
+.order_bloc_tastes_img {
+    font-size: 18px !important;
+    object-fit: contain !important;
+    margin-bottom: 15px !important;;
+}
+
+.order_bloc_tastes_img div {
+    width: 90% !important;
+}
+
+.order_bloc_tastes {
+    margin-top: 0px !important;
+}
+
+.form_order {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+}
+
+.form_order p {
+    grid-column: 1 / 3;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/****************SHORTCODE*******************/ 
+
+.container {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+height: 56px;
+width: 100%;
+gap: 10px;
+}
+
+.column1 {
+width: 40%;
+display: flex;
+flex-direction: row;
+height: inherit;
+}
+
+.column2 {
+width: 60%;
+display: flex;
+align-items: center;
+justify-content: end;
+}
+
+.column2 a {
+color: white;
+text-decoration: none;
+width: 100%;
+height: 56px;
+background-color: #e0b9b4;
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.column2 a:hover {
+background-color: #c02e44;
+}
+
+.column1_left {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 60%;
+}
+
+.column1_left input {
+height: 56px;
+width: 100%;
+border: none;
+border-radius: 5px 0px 0 5px;
+text-align: center;
+}
+
+.column1_right {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 40%;
+height: 56px;
+background-color: #dc9f96;
+border-radius: 0 5px 5px 0;
+gap: 0px;
+}
+
+.column1_right_top {
+border-bottom: 1px solid white;
+display: flex;
+align-items: center;
+justify-content: center;
+width: inherit;
+height: inherit;
+}
+
+.column1_right_bottom {
+display: flex;
+align-items: center;
+justify-content: center;
+width: inherit;
+height: inherit;
+}
+  

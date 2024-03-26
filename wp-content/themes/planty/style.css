@@ -280,6 +280,12 @@ nav ul .item_Admin a:hover {
     margin-top: 0px !important;
 }
 
+.contact_form_group {
+    padding-top: 60px !important;
+    padding-bottom: 10px !important;
+    margin-bottom: -30px !important;
+}
+
 .wpcf7 {
     display: flex !important;
     justify-content: center !important;
@@ -287,28 +293,65 @@ nav ul .item_Admin a:hover {
 }
 
 .wpcf7 p input {
-    text-align: center !important;
     border-radius: 7px;
+    height: 70px;
 }
 
 .wpcf7 p label span textarea {
     border-radius: 7px;
+    height: 237px;
 }
 
 .wpcf7-submit {
     border-radius: 5px !important;
     background-color: #DC9F96 !important;
     width: 200px;
+    height: 55px !important;
     font-size: 15px !important;
     text-transform: capitalize !important;
+}
+
+.wpcf7-submit:hover {
+    background-color: #C02E44 !important;
+    text-decoration: none !important;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 0px !important;
+    color:black;
 }
 
 .wpcf7-spinner {
     position: absolute;
+}
+
+.contact_bloc_form {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.contact_bloc_form img {
+    position: absolute !important;
+    top: 414px !important;
+    left: -395px !important;
+    max-height: 150px !important;
+    object-fit: contain !important;
+}
+
+.contact_footer_image {
+    background-color: var(--main-color);
+    margin: 0 !important;
+}
+
+
+*/******************* ORDER *******************/*
+
+.order_product_group {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
 }

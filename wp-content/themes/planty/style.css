@@ -87,13 +87,6 @@ nav a {
     color: black !important;
 }
 
-nav a:hover {
-    font-weight: 700;
-    font-size: 13px;
-    text-decoration: none !important;
-    margin: auto;
-}
-
 nav ul {
     text-align: left !important;
     height: 100%;
@@ -139,6 +132,10 @@ nav ul .item_Nous_rencontrer a:hover {
     transform: translateX(15px);
     transition-duration : 0s;
     padding: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none !important;
+    margin: auto;
 }
 
 nav ul .item_Admin a {
@@ -154,7 +151,21 @@ nav ul .item_Admin a:hover {
     transform: translateX(5px);
     transition-duration : 0s;
     padding: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none !important;
+    margin: auto;
+}
 
+.current-menu-item a {
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none !important;
+    margin-left: 5px !important;
+}
+
+.current-menu-item a {
+    pointer-events: none;
 }
 
 #site-content article header {
@@ -351,6 +362,7 @@ nav ul .item_Admin a:hover {
 
 .order_title_group {
     padding-top: 60px !important;
+    padding-bottom: 30px !important;
 }
 
 .order_product_group {
@@ -358,8 +370,10 @@ nav ul .item_Admin a:hover {
     margin-bottom: 0px !important;
     padding-top: 30px !important;
     padding-bottom: 30px !important;
-    max-width: 900px !important;
-    border-bottom: 1px solid white;
+}
+
+.order_product_group div {
+    max-width: 800px;
 }
 
 .order_product_group h2 {
@@ -371,7 +385,9 @@ nav ul .item_Admin a:hover {
 .order_bloc_tastes_img {
     font-size: 18px !important;
     object-fit: contain !important;
-    margin-bottom: 15px !important;;
+    margin-bottom: 15px !important;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .order_bloc_tastes_img div {
@@ -380,11 +396,19 @@ nav ul .item_Admin a:hover {
 
 .order_bloc_tastes {
     margin-top: 0px !important;
+    border-bottom: 1px solid white;
+    padding-bottom: 40px;
+}
+
+.order_form_group {
+    padding-top: 10px !important;
 }
 
 .form_order {
     grid-template-columns: 1fr 1fr;
     display: grid;
+    min-width: 800px !important;
+    row-gap: 30px;
 }
 
 .form_order p {
@@ -393,6 +417,62 @@ nav ul .item_Admin a:hover {
     justify-self: center;
 }
 
+.right {
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 0px;
+}
+
+.left {
+    border: 0;
+    padding-bottom: 0;
+    padding-right: 40px;
+    padding-left: 0;
+}
+
+.right p {
+    margin-bottom: 0;
+}
+
+.left p {
+    margin-bottom: 0;
+}
+
+.right p label {
+    margin-bottom: 0;
+    padding-top: 20px;
+    color:white;
+}
+
+.left p label {
+    margin-bottom: 0;
+    padding-top: 20px;
+    color:white;
+}
+
+.right p label span input {
+    margin-top: 10px;
+}
+
+.left p label span input {
+    margin-top: 10px;
+}
+
+.form_title {
+    color:white;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: -25px;
+    padding-left: 0px;
+}
+
+.button_order input {
+    font-weight: 400;
+    font-size: 15px;
+}
 
 /****************SHORTCODE*******************/ 
 
@@ -468,7 +548,7 @@ border-bottom: 1px solid white;
 display: flex;
 align-items: center;
 justify-content: center;
-width: inherit;
+width: 100%;
 height: inherit;
 }
 

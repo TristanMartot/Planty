@@ -3,6 +3,7 @@
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles() {
 wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/nav.css', array(), filemtime(get_stylesheet_directory() . '/css/nav.css'));
 }
 // action avec priorité 20. 
 // on sort wallstreet-style de la file d'attente et on rentre le style.css de l'enfant
@@ -46,8 +47,8 @@ function order_quantity_func($atts)
                 <div class="column1">
                 <div class="column1_left"><input value="0"></div>
                 <div class="column1_right">
-                    <div class="column1_right_top">+</div>
-                    <div class="column1_right_bottom">-</div>
+                    <div class="column1_right_top"><a href="#">+</a></div>
+                    <div class="column1_right_bottom"><a href="#">-</a></div>
                 </div>
                 </div>  
                 <div class="column2"><a href="#">OK</a></div>  
@@ -62,4 +63,24 @@ function order_quantity_func($atts)
 
     return $output;
 }
+
+
+
+function add_admin_item() {
+    if (is_user_logged_in()) 
+	{
+        $items =    '<li id="menu-item-168" class="item_Nous_rencontrer"><a href="http://localhost/planty/nous-rencontrer/">Nous rencontrer</a></li>
+                    <li id="menu-item-61" class="item_Admin"><a href="http://localhost/planty/wp-admin/">Admin</a></li>
+                    <li id="menu-item-169" class="item_Commander"><a href="http://localhost/planty/commander/">Commander</a></li>';
+    }
+    else 
+    {
+        $items =    '<li id="menu-item-168" class="item_Nous_rencontrer"><a href="http://localhost/planty/nous-rencontrer/">Nous rencontrer</a></li>
+                    <li id="menu-item-169" class="item_Commander"><a href="http://localhost/planty/commander/">Commander</a></li>';
+    }
+        return $items;
+}
+add_action('wp_nav_menu_items', 'add_admin_item', 10);
+
+
 ?>

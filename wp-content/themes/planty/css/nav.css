@@ -1,7 +1,6 @@
 /************ NAV ****************/
 
 @media screen and (min-width: 1000px) {
-
     nav {
         height: 100%;
     }
@@ -13,10 +12,25 @@
     nav ul {
         text-align: left !important;
         height: 100%;
-        align-items:center;
+        align-items: center;
         gap: 20px;
     }
 
+    nav ul .item_Commander {
+        width: 236px;
+        height: 100%;
+        background-color: var(--button-color);
+        display: flex;
+    }    
+    
+    nav ul .item_Commander:hover {
+        width: 236px;
+        height: 100%;
+        background-color: var(--hover-color);
+        display: flex;
+        font-size: inherit;
+    }
+    
     nav ul .item_Commander a {
         width: 236px;
         height: 100%;
@@ -28,32 +42,18 @@
         text-decoration: none !important;
         font-size: 16px;
     }
-    nav ul .item_Commander {
-        width: 236px;
-        height: 100%;
-        background-color: #DC9F96;
-        display: flex;
-    }
-
-    nav ul .item_Commander:hover {
-        width: 236px;
-        height: 100%;
-        background-color:#C02E44;
-        display: flex;
-        font-size: inherit;
-    }
 
     nav ul .item_Nous_rencontrer a {
         width: 140px;
-        margin-left:0;
+        margin-left: 0;
         text-align: right;
     }
 
     nav ul .item_Nous_rencontrer a:hover {
         width: 140px;
-        margin-left:0;
+        margin-left: 0;
         transform: translateX(15px);
-        transition-duration : 0s;
+        transition-duration: 0s;
         padding: 10px;
         font-weight: 700;
         font-size: 13px;
@@ -63,16 +63,16 @@
 
     nav ul .item_Admin a {
         width: 60px;
-        margin-left:0;
+        margin-left: 0;
         padding: 5px;
         text-align: right;
     }
 
     nav ul .item_Admin a:hover {
         width: 60px;
-        margin-left:0;
+        margin-left: 0;
         transform: translateX(5px);
-        transition-duration : 0s;
+        transition-duration: 0s;
         padding: 10px;
         font-weight: 700;
         font-size: 13px;
@@ -95,20 +95,50 @@
         display: none;
     }
 
-
-
 }
 
 
-@media screen and (max-width: 999px) {
 
+@media screen and (max-width: 999px) {
     nav ul li a {
         text-align: center;
         color: black !important;
     }
 
     .item_Commander a {
-        background-color: #C02E44;
+        background-color: var(--hover-color);
     }
 
+    .toggle,
+    .toggle-inner,
+    .toggle-icon, 
+    .svg-icon {
+        min-width: 60px !important;
+    }
+
+    .header-titles-wrapper {
+        box-sizing: content-box;
+    }
+
+    .toggle-text,
+    .svg-icon {
+        display: none;
+    }
+
+    .mobile-menu {
+    margin-top: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+    .custom-logo {
+        max-width: 200px;
+    }
+
+    .toggle {
+        padding-right: 0px !important;
+    }
 }

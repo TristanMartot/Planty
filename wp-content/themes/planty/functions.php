@@ -1,27 +1,14 @@
 <?php
+
 // action pour faire entrer en file d'attente le style.css du thème parent
-add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles', 20);
+
 function theme_enqueue_styles() {
-wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/nav.css', array(), filemtime(get_stylesheet_directory() . '/css/nav.css'));
+wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+wp_enqueue_style( 'enfant-style', get_stylesheet_directory_uri() . '/style.css' );
+wp_enqueue_style( 'enfant-style-nav', get_stylesheet_directory_uri() . '/css/nav.css' );
+wp_enqueue_style( 'enfant-style-shortcodes', get_stylesheet_directory_uri() . '/css/shortcodes.css' );
 }
-// action avec priorité 20. 
-// on sort wallstreet-style de la file d'attente et on rentre le style.css de l'enfant
-add_action('wp_enqueue_scripts', 'style_theme_enfant', 20);
-function style_theme_enfant() {
-wp_dequeue_style('twentytwenty', get_stylesheet_uri() );
-wp_enqueue_style('enfant-style', get_stylesheet_uri() );
-}
-
-
-function planty_menu_class($classes, $item)
-{
-    $classes[] = 'item_' .$item->title ;
-    return str_replace(' ', '_', $classes);
-}
-
-add_filter('nav_menu_css_class', 'planty_menu_class', 10, 2);
-
 
 
 
@@ -65,6 +52,7 @@ function order_quantity_func($atts)
 }
 
 
+/********* HOOKS **********/
 
 function add_admin_item() {
     if (is_user_logged_in()) 
@@ -83,4 +71,8 @@ function add_admin_item() {
 add_action('wp_nav_menu_items', 'add_admin_item', 10);
 
 
+function create_menu() { 
+    register_nav_menu('planty_footer',__( 'Planty Footer' )); 
+    } 
+add_action( 'init', 'create_menu' );
 ?>

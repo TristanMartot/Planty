@@ -43,37 +43,16 @@
         font-size: 16px;
     }
 
-    nav ul .item_Nous_rencontrer a {
-        width: 140px;
+    nav ul li.item_menu a {
         margin-left: 0;
         text-align: right;
     }
 
-    nav ul .item_Nous_rencontrer a:hover {
-        width: 140px;
-        margin-left: 0;
+    nav ul li.item_menu a:hover {
+        padding: 10px;
+        margin-left: -17px !important;
         transform: translateX(15px);
         transition-duration: 0s;
-        padding: 10px;
-        font-weight: 700;
-        font-size: 13px;
-        text-decoration: none !important;
-        margin: auto;
-    }
-
-    nav ul .item_Admin a {
-        width: 60px;
-        margin-left: 0;
-        padding: 5px;
-        text-align: right;
-    }
-
-    nav ul .item_Admin a:hover {
-        width: 60px;
-        margin-left: 0;
-        transform: translateX(5px);
-        transition-duration: 0s;
-        padding: 10px;
         font-weight: 700;
         font-size: 13px;
         text-decoration: none !important;

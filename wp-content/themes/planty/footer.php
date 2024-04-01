@@ -16,23 +16,16 @@
 			<footer id="site-footer" class="header-footer-group">
 
 				<div class="footer_nav">
-				<?php 
-$menu_name = 'planty_footer';
-$locations = get_nav_menu_locations();
-$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+				<?php
+									wp_nav_menu(
+										array(
+											'container'  => '',
+											'items_wrap' => '%3$s',
+											'menu' => 'menu footer planty',
+										)
+									);
+								?>
 
-if(!empty($menu)):
-$menuitems = wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) );
- 
-  	foreach( $menuitems as $key => $item ):
-    $title = $item->title;
-    $link = $item->url;
-    echo "<li class='nav-item'>";
-    echo "<a class='nav-item nav-link' href=" . $link . ">" . $title . "<span class='nav-underline'></span></a>";
-    echo "</li>";
-	endforeach;
-	endif; 		
-				?>
 				</div>
 
 			</footer><!-- #site-footer -->

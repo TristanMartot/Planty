@@ -12,9 +12,9 @@ wp_enqueue_style( 'enfant-style-shortcodes', get_stylesheet_directory_uri() . '/
 
 
 
-//*************SHORTCODE***************//
+//************* SHORTCODE ***************//
 
-// Ajour de code dans la section de commande de la page COMMANDER 
+// Ajout de code dans la section de commande de la page COMMANDER 
 add_shortcode('order_quantity', 'order_quantity_func');
 
 function order_quantity_func($atts)
@@ -52,27 +52,16 @@ function order_quantity_func($atts)
 }
 
 
+
 /********* HOOKS **********/
 
-function add_admin_item() {
-    if (is_user_logged_in()) 
-	{
-        $items =    '<li id="menu-item-168" class="item_Nous_rencontrer"><a href="http://localhost/planty/nous-rencontrer/">Nous rencontrer</a></li>
-                    <li id="menu-item-61" class="item_Admin"><a href="http://localhost/planty/wp-admin/">Admin</a></li>
-                    <li id="menu-item-169" class="item_Commander"><a href="http://localhost/planty/commander/">Commander</a></li>';
+// Ajoute le bouton admin sur le menu lorsque l'utilisateur est connecté
+function add_admin_item( $items, $args ) {
+    if (is_user_logged_in() && $args->menu == 'menu') {
+        $items .= '<li class="item_menu"><a href="../wp-admin">Admin</a></li>';
     }
-    else 
-    {
-        $items =    '<li id="menu-item-168" class="item_Nous_rencontrer"><a href="http://localhost/planty/nous-rencontrer/">Nous rencontrer</a></li>
-                    <li id="menu-item-169" class="item_Commander"><a href="http://localhost/planty/commander/">Commander</a></li>';
-    }
-        return $items;
+    return $items;
 }
-add_action('wp_nav_menu_items', 'add_admin_item', 10);
+add_filter( 'wp_nav_menu_items', 'add_admin_item', 10, 2 );
 
-
-function create_menu() { 
-    register_nav_menu('planty_footer',__( 'Planty Footer' )); 
-    } 
-add_action( 'init', 'create_menu' );
 ?>

@@ -1,0 +1,112 @@
+/****************SHORTCODE order_quantity_func *******************/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 100%;
+    gap: 10px;
+}
+
+.column1 {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    text-decoration: none;
+}
+
+.column1 a {
+    text-decoration: none;
+}
+
+.column2 {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.column2 a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 56px;
+    background-color: #e0b9b4;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column2 a:hover {
+    background-color: var(--hover-color);
+}
+
+.column1_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.column1_left input {
+    height: 56px;
+    width: 100%;
+    border: none;
+    border-radius: 5px 0px 0 5px;
+    text-align: center;
+}
+
+.column1_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 56px;
+    background-color: var(--button-color);
+    border-radius: 0 5px 5px 0;
+    gap: 0px;
+}
+
+.column1_right_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+}
+
+.column1_right_bottom a:hover {
+    background-color: var(--hover-color);
+    border-radius: 0 0 5px 0;
+}
+
+.column1_right_top {
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+}
+
+.column1_right_top a,
+.column1_right_bottom a {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.column1_right_top a:hover {
+    background-color: var(--hover-color);
+    border-radius: 0 5px 0 0;
+}
+
+
+/****************END SHORTCODE order_quantity_func *******************/

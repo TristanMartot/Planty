@@ -1,0 +1,123 @@
+/************ NAV ****************/
+
+@media screen and (min-width: 1000px) {
+    nav {
+        height: 100%;
+    }
+
+    nav a {
+        color: black !important;
+    }
+
+    nav ul {
+        text-align: left !important;
+        height: 100%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    nav ul .item_Commander {
+        width: 236px;
+        height: 100%;
+        background-color: var(--button-color);
+        display: flex;
+    }    
+    
+    nav ul .item_Commander:hover {
+        width: 236px;
+        height: 100%;
+        background-color: var(--hover-color);
+        display: flex;
+        font-size: inherit;
+    }
+    
+    nav ul .item_Commander a {
+        width: 236px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white !important;
+        font-weight: bold;
+        text-decoration: none !important;
+        font-size: 16px;
+    }
+
+    nav ul li.item_menu a {
+        margin-left: 0;
+        text-align: right;
+    }
+
+    nav ul li.item_menu a:hover {
+        padding: 10px;
+        margin-left: -17px !important;
+        transform: translateX(15px);
+        transition-duration: 0s;
+        font-weight: 700;
+        font-size: 13px;
+        text-decoration: none !important;
+        margin: auto;
+    }
+
+    .current-menu-item a {
+        font-weight: 700;
+        font-size: 13px;
+        text-decoration: none !important;
+        margin-left: 5px !important;
+    }
+
+    .current-menu-item a {
+        pointer-events: none;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (max-width: 999px) {
+    nav ul li a {
+        text-align: center;
+        color: black !important;
+    }
+
+    .item_Commander a {
+        background-color: var(--hover-color);
+    }
+
+    .toggle,
+    .toggle-inner,
+    .toggle-icon, 
+    .svg-icon {
+        min-width: 60px !important;
+    }
+
+    .header-titles-wrapper {
+        box-sizing: content-box;
+    }
+
+    .toggle-text,
+    .svg-icon {
+        display: none;
+    }
+
+    .mobile-menu {
+    margin-top: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+    .custom-logo {
+        max-width: 200px;
+    }
+
+    .toggle {
+        padding-right: 0px !important;
+    }
+}

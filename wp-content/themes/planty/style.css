@@ -1,7 +1,559 @@
 /*
  Theme Name:   Planty
- Description:  Thème Planty basé sur le thème de twentytwentyfour
+ Description:  Thème Planty basé sur le thème de twentytwenty
  Author:       Tristan
- Template:     twentytwentyfour
+ Template:     twentytwenty
  Version:      1.0.0
 */
+
+/********** GENERAL ***********/
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+:root {
+    --main-color: #ece2da;
+    --second-color: #3b8e46;
+    --button-color: #dc9f96;
+    --hover-color: #c02e44;
+}
+
+* {
+    font-family: syne !important;
+    font-size: 16px;
+}
+
+a {
+    color: black;
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+body {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#site-content article header {
+    display: none;
+}
+
+
+/********* HEADER *********/
+header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+}
+
+.logo a {
+    padding: 30px;
+    width: 250px;
+}
+
+.header_section {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.nav_wrapper {
+    height: 100%;
+}
+
+
+/********* FOOTER *********/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    height: 60px;
+}
+
+footer li {
+    list-style-type: none !important;
+}
+
+.footer_nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+/********* HOME PAGE *********/
+.home_image_top img {
+    z-index: 10;
+    object-fit: contain !important;
+}
+
+.home_top_group {
+    border-bottom-right-radius: 50% 50px;
+    border-bottom-left-radius: 50% 50px;
+    padding-top: 100px !important;
+}
+
+.home_text_group {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.gallery_bloc_tastes {
+    max-width: 800px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.gallery_bloc_tastes_img {
+    padding: 20px;
+}
+
+.gallery_bloc_tastes_img img {
+    object-fit: contain !important;
+}
+
+.gallery_bloc_tastes_img div {
+    width: 100% !important;
+    font-size: 46px !important;
+}
+
+.gallery_bloc_tastes_img div p {
+    font-size: 46px !important;
+}
+
+.home_tastes_group {
+    border-bottom-right-radius: 50% 25px;
+    border-bottom-left-radius: 50% 25px;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+
+.home_tastes_group a {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-decoration: none;
+}
+
+.home_tastes_group a:hover {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-decoration: none !important;
+    background-color: var(--hover-color) !important;
+}
+
+.home_tastes_group h2 {
+    margin-bottom: 0px !important;
+}
+
+.home_review {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-width: 1200px !important;
+}
+
+.home_review_group {
+    padding-top: 100px;
+    margin: 0 !important;
+}
+
+.home_review_group_column {
+    margin-top: 0px !important;
+}
+
+
+/************ CONTACT PAGE *************/
+.contact_top_group {
+    margin: 0;
+    margin-top: -100px !important;
+    padding-top: 0px !important;
+    border-bottom-right-radius: 50% 90px;
+    border-bottom-left-radius: 50% 90px;
+}
+
+.contact_image_top img {
+    max-width: 150px !important;
+    position: relative !important;
+    top: 100px;
+    left: -225px;
+}
+
+.contact_team_group {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: -220px !important;
+}
+
+.contact_team_group h2 {
+    margin-bottom: 0px;
+}
+
+.contact_team_image img {
+    position: relative;
+    max-height: 200px;
+    object-fit: contain;
+    bottom: 178px;
+    left: 660px;
+}
+
+.contact_team_column {
+    max-width: 1000px !important;
+    margin-top: 0px !important;
+}
+
+.contact_form_group {
+    padding-top: 60px !important;
+    padding-bottom: 10px !important;
+    margin-bottom: -30px !important;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px !important;
+    color: black;
+}
+
+.form .wpcf7 {
+    display: flex !important;
+    justify-content: center !important;
+    max-width: 500px !important;
+}
+
+.form input {
+    border-radius: 7px;
+    height: 70px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.form textarea {
+    border-radius: 7px;
+    height: 237px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.form .wpcf7-submit {
+    border-radius: 5px !important;
+    background-color: var(--button-color) !important;
+    width: 200px;
+    height: 55px !important;
+    font-size: 15px !important;
+    text-transform: capitalize !important;
+}
+
+.form .wpcf7-submit:hover {
+    background-color: var(--hover-color) !important;
+    text-decoration: none !important;
+}
+
+.form .wpcf7-response-output {
+    margin: 0 !important;
+    text-align: center;
+}
+
+.form .wpcf7-spinner {
+    position: absolute;
+}
+
+.contact_bloc_form {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.contact_bloc_form img {
+    position: absolute !important;
+    top: 414px !important;
+    left: -395px !important;
+    max-height: 150px !important;
+    object-fit: contain !important;
+}
+
+.contact_footer_image {
+    background-color: var(--main-color);
+    margin: 0 !important;
+}
+
+
+/************ ORDER PAGE *************/
+.order_title_group {
+    padding-top: 60px !important;
+    padding-bottom: 30px !important;
+    margin-bottom: 0 !important;
+}
+
+.order_title_group h1 {
+    color: white !important;
+}
+
+.order_product_group {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.order_product_group h2 {
+    color:white !important;
+}
+
+.order_product_group div {
+    max-width: 800px;
+}
+
+.order_product_group h2 {
+    border-top: 1px solid white;
+    padding-top: 30px !important;
+    margin-bottom: 0px;
+}
+
+.order_bloc_tastes_img {
+    font-size: 18px !important;
+    object-fit: contain !important;
+    margin-bottom: 15px !important;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.order_bloc_tastes_img div {
+    width: 90% !important;
+}
+
+.order_bloc_tastes {
+    margin-top: 0px !important;
+    border-bottom: 1px solid white;
+    padding-bottom: 40px;
+}
+
+.order_form_group {
+    padding-top: 10px !important;
+}
+
+.order_form_group div {
+    max-width: 800px;
+}
+
+.order_form_group div div {
+    max-width: 800px !important;
+}
+
+.form_order {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    row-gap: 30px;
+}
+
+.form_order p {
+    grid-column: 1 / 3;
+    align-self: center;
+    justify-self: center;
+}
+
+.form_order input {
+    border-radius: 7px;
+    height: 70px;
+    font-weight: 400;
+    font-size: 15px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.form_order .wpcf7-submit {
+    border-radius: 5px !important;
+    background-color: var(--button-color) !important;
+    width: 200px;
+    height: 55px !important;
+    font-size: 15px !important;
+    text-transform: capitalize !important;
+}
+
+.form_order .wpcf7-submit:hover {
+    background-color: var(--hover-color) !important;
+    text-decoration: none !important;
+}
+
+.form_order .wpcf7-spinner {
+    position: absolute;
+}
+
+.form_order .wpcf7-response-output {
+    position: relative;
+    top: -80px;
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+.form_order .wpcf7-not-valid-tip {
+    color: yellow;
+}
+
+.right {
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 2px solid white;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 0px;
+}
+
+.left {
+    border: 0;
+    padding-bottom: 0;
+    padding-right: 40px;
+    padding-left: 0;
+}
+
+.right p {
+    margin-bottom: 0;
+}
+
+.right p label {
+    margin-bottom: 0;
+    padding-top: 20px;
+    color: white;
+}
+
+.right p label span input {
+    margin-top: 10px;
+}
+
+.left p {
+    margin-bottom: 0;
+}
+
+.left p label {
+    margin-bottom: 0;
+    padding-top: 20px;
+    color: white;
+}
+
+.left p label span input {
+    margin-top: 10px;
+}
+
+.form_title {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: -25px;
+    padding-left: 0px;
+}
+
+
+/*********** LEGAL PAGE *********/
+
+.legal p {
+    max-width: 1000px !important;
+}
+
+
+/**************** RESPONSIVE ******************/
+@media screen and (max-width: 999px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .contact_image_top {
+        display: none;
+    }
+
+    .contact_top_group {
+        background-color: var(--main-color);
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .contact_form_group {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .gallery_bloc_tastes_img {
+        margin-top: 0px !important;
+    }
+
+    .gallery_bloc_tastes {
+        gap: 0px;
+    }
+
+    .gallery_bloc_tastes_img div p {
+        font-size: 30px !important;
+    }
+
+    .home_review {
+        gap: 0px !important;
+        flex-direction: column;
+        max-width: 500px !important;
+    }    
+    
+    .home_review_group_column div {
+        margin-bottom: 0px !important;
+    }
+
+    .home_review_group_column div div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home_top_group {
+        padding-top: 60px !important;
+    }
+
+    .home_image_top {
+        margin-top: 10px;
+    }
+
+    .order_bloc_tastes_img {
+        font-size: 16px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 899px) {
+    .gallery_bloc_tastes_img {
+        min-height: 220px !important;
+    }
+
+    .form_order {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left,
+    .right {
+        padding-left: 0;
+        padding-right: 0;
+        border: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .contact_bloc_form img {
+        display: none;
+    }
+}
